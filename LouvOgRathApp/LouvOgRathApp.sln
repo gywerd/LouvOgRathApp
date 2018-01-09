@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LouvOgRathApp.ServerSide.DataAccess", "LouvOgRathApp.ServerSide.DataAccess\LouvOgRathApp.ServerSide.DataAccess.csproj", "{4B3AAA3B-4FEB-48E6-A5CD-92BEB8B21000}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LouvOgRathApp.ClientSide.ClientControllers", "LouvOgRathApp.ClientSide.ClientControllers\LouvOgRathApp.ClientSide.ClientControllers.csproj", "{F78A2560-A009-447C-896A-0A7AD59B2B26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LouvOgRathApp.ServerSide.ServerControllers", "LouvOgRathApp.ServerSide.ServerControllers\LouvOgRathApp.ServerSide.ServerControllers.csproj", "{D15E4AE6-844C-4C26-8584-BD1702FAFEA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LouvOgRathApp.GUI", "LouvOgRathApp.GUI\LouvOgRathApp.GUI.csproj", "{3CA8B577-3625-44E6-A1B9-77D285175107}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D15E4AE6-844C-4C26-8584-BD1702FAFEA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D15E4AE6-844C-4C26-8584-BD1702FAFEA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D15E4AE6-844C-4C26-8584-BD1702FAFEA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA8B577-3625-44E6-A1B9-77D285175107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA8B577-3625-44E6-A1B9-77D285175107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA8B577-3625-44E6-A1B9-77D285175107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA8B577-3625-44E6-A1B9-77D285175107}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{1A5E997E-9284-471D-BAB3-6AFDBFBFBFE7} = {016B3F98-203D-4D29-A58A-085D2E65385F}
 		{F78A2560-A009-447C-896A-0A7AD59B2B26} = {08DA6688-B0D7-44FC-8E54-23C6C31F8650}
 		{D15E4AE6-844C-4C26-8584-BD1702FAFEA1} = {D3B2B106-7621-402D-AC04-C28BFE7EA012}
+		{3CA8B577-3625-44E6-A1B9-77D285175107} = {016B3F98-203D-4D29-A58A-085D2E65385F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3037C00-9B01-4FD8-87DC-DE5A9C9AA97B}

@@ -1,0 +1,62 @@
+﻿<Window x:Class="LouvOgRathApp.GUI.LoginPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LouvOgRathApp.GUI"
+        mc:Ignorable="d"
+        Title="LoginPopUp" Height="250" Width="350">
+    <Grid Background="Crimson">
+        <Grid Background="Gray"
+              Margin="19,19">
+            <Grid x:Name="loginGrid" 
+              Margin="1,1"
+              Background="Crimson">
+                <Label Content="Louv &amp; Rath A/S" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,0" 
+                   VerticalAlignment="Top" 
+                   FontFamily="Segoe UI Black" 
+                   FontSize="30"/>
+                <Label Content="Alpha Version 0.0.1" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,40,0,0" 
+                   VerticalAlignment="Top" 
+                   FontSize="12"/>
+                <Label Content="©2018 Daniel Giversen" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,60,0,0" 
+                   VerticalAlignment="Top" 
+                   FontSize="12"/>
+                <Button x:Name="btnSecretary"
+                    Content="Sekretær"
+                    IsDefault="True"
+                    HorizontalAlignment="Center"
+                    Margin="0,30,0,0"
+                    Width="150"
+                    Height="20"
+                    VerticalAlignment="Center" 
+                    Click="BtnSecretary_Click" />
+                <Button x:Name="btnSolicitor"
+                    Content="Advokat"
+                    IsDefault="False"
+                    HorizontalAlignment="Center"
+                    Margin="0,80,0,0"
+                    Width="150"
+                    Height="20"
+                    VerticalAlignment="Center" 
+                    Click="BtnSolicitor_Click" />
+                <Button x:Name="btnClient"
+                    Content="Klient"
+                    IsDefault="False"
+                    HorizontalAlignment="Center"
+                    Margin="0,130,0,0"
+                    Width="150"
+                    Height="20"
+                    VerticalAlignment="Center" 
+                    Click="BtnClient_Click" />
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
