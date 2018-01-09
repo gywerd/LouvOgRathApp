@@ -5,11 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LouvOgRathApp.GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="7*" />
-        </Grid.ColumnDefinitions>
+        Title="MainWindow" Height="900" Width="1600" ResizeMode="CanMinimize" Closing="Window_Closing">
+    <Grid Background="LightGray">
+        <DockPanel>
+            <Menu DockPanel.Dock="Top"
+                  Height="25"
+                  Background="LightGray">
+                <MenuItem Header="Filer">
+                    <MenuItem Click="OnMenuFilesNewCase_Click"
+                              Header="Ny sag" />
+                    <MenuItem Click="OnMenuFilesClose_Click"
+                              Header="Luk" />
+                </MenuItem>
+                <MenuItem Header="Hjælp">
+                    <MenuItem Click="MenuHelpAbout_Click"
+                              Header="Om" />
+                </MenuItem>
+            </Menu>
+            <StatusBar x:Name="statusBar"
+                       Background="Red"
+                       DockPanel.Dock="Bottom"
+                       Height="30" >
+                <Label x:Name="labelConnection"
+                       Content="Kunne ikke opnå forbindelse til serveren."
+                       Foreground="White"
+                       Height="27" Width="800"
+                       HorizontalAlignment="Left" 
+                       Margin="5,0" />
+                <Label x:Name="labelWeather"
+                       Content="Venter på vejr data..."
+                       Foreground="White"
+                       Height="27" Width="750"
+                       HorizontalAlignment="Right"
+                       Margin="5,0" />
+            </StatusBar>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200*"/>
+                    <ColumnDefinition Width="12" />
+                    <ColumnDefinition Width="700*" />
+                </Grid.ColumnDefinitions>
+                <GroupBox x:Name="groupBoxLeft"
+                          Grid.Column="0"
+                          Margin="5,0,5,5"
+                          BorderThickness="0" >
+                    <UserControl x:Name="userControlLeft"
+                         Margin="5" />
+                </GroupBox>
+                <GridSplitter Grid.Column="1" 
+                              HorizontalAlignment="Left"
+                              Background="DarkGray"
+                              Height="850" Width="2"
+                              Margin="5"
+                              VerticalAlignment="Top" />
+                <GroupBox x:Name="groupBoxCentre"
+                          Grid.Column="2"
+                          Margin="0,5,5,5"
+                          BorderThickness="0" >
+                    <UserControl x:Name="userControlRight"
+                                 Margin="5" />
+                </GroupBox>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>

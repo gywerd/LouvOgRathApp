@@ -21,8 +21,15 @@ namespace LouvOgRathApp.GUI
     public partial class MainWindow : Window
     {
         #region Fields
-        public string user;
-        Window callWindow = new Window();
+        Window callWindow;
+        public string User;
+        NewCasePopUp newCase;
+        UcCases ucCases;
+        UcLawCases ucLawCases;
+        UcMyCases ucMyCases;
+        UcSummary ucSummary;
+        UcSecretary ucSecretary;
+        UcSolicitor ucSolicitor;
         #endregion
 
         #region Window
@@ -30,12 +37,49 @@ namespace LouvOgRathApp.GUI
         {
             InitializeComponent();
             callWindow = (Window)w;
+            User = user;
+            InvokeUserControls();
         }
+
         #endregion
 
         #region Events
         /// <summary>
-        /// returns to LoginPopUp
+        /// Shows MessageBox with Copyright info 
+        /// </summary>
+        /// <param name="sender">Object</param>
+        /// <param name="e">RoutedEventArgs</param>
+        private void MenuHelpAbout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("©2018 Daniel Giversen", "Om Louv & Rath", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+        }
+
+        /// <summary>
+        /// Closes this window, and returns to LoginPopUp
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">RoutedEventArgs</param>
+        private void OnMenuFilesClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            callWindow.Show();
+        }
+
+        /// <summary>
+        /// Opens a NewCasePopUp Window
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">RoutedEventArgs</param>
+        private void OnMenuFilesNewCase_Click(object sender, RoutedEventArgs e)
+        {
+            newCase = new NewCasePopUp(this);
+            newCase.Activate();
+            this.Hide();
+            newCase.Show();
+        }
+
+        /// <summary>
+        /// Closes thos window, and returns to LoginPopUp
         /// </summary>
         /// <param name="sender">object</param>
         /// <param name="e">System.ComponentModel.CancelEventArgs</param>
@@ -43,8 +87,29 @@ namespace LouvOgRathApp.GUI
         {
             callWindow.Show();
         }
+
         #endregion
 
+        #region Methods
+        private void InvokeUserControls()
+        {
+            if (User == "Secretary")
+            {
+                userControlLeft.Content = ucCases = new UcCases();
+                userControlRight.Content = ucSecretary = new UcSecretary(); ;
+            }
+            else if (User == "Lawyer")
+            {
+                userControlLeft.Content = ucLawCases = new UcLawCases();
+                userControlRight.Content = ucSolicitor = new UcSolicitor();
+            }
+            else
+            {
+                userControlLeft.Content = ucMyCases = new UcMyCases();
+                userControlRight.Content = ucSummary = new UcSummary();
+            }
+        }
+        #endregion
 
     }
 }

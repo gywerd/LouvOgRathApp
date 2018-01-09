@@ -6,18 +6,19 @@
         xmlns:local="clr-namespace:LouvOgRathApp.GUI"
         mc:Ignorable="d"
         Title="LoginPopUp" Height="250" Width="350">
-    <Grid Background="Crimson">
-        <Grid Background="Gray"
+    <Grid Background="RoyalBlue">
+        <Grid Background="DarkGray"
               Margin="19,19">
             <Grid x:Name="loginGrid" 
               Margin="1,1"
-              Background="Crimson">
+              Background="RoyalBlue">
                 <Label Content="Louv &amp; Rath A/S" 
-                   HorizontalAlignment="Center" 
-                   Margin="0,0,0,0" 
-                   VerticalAlignment="Top" 
-                   FontFamily="Segoe UI Black" 
-                   FontSize="30"/>
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,0" 
+                       VerticalAlignment="Top" 
+                       FontFamily="Segoe UI Black" 
+                       FontSize="30"
+                       Foreground="Crimson"/>
                 <Label Content="Alpha Version 0.0.1" 
                    HorizontalAlignment="Center" 
                    Margin="0,40,0,0" 

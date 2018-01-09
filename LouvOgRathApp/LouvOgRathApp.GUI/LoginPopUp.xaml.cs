@@ -29,7 +29,7 @@ namespace LouvOgRathApp.GUI
         #region Buttons
         private void BtnSecretary_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow(this, "secretary");
+            MainWindow main = new MainWindow(this, "Secretary");
             main.Activate();
             this.Hide();
             main.Show();
@@ -38,7 +38,7 @@ namespace LouvOgRathApp.GUI
 
         private void BtnSolicitor_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow(this, "solicitor");
+            MainWindow main = new MainWindow(this, "Lawyer");
             main.Activate();
             this.Hide();
             main.Show();
@@ -47,7 +47,7 @@ namespace LouvOgRathApp.GUI
 
         private void BtnClient_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow(this, "client");
+            MainWindow main = new MainWindow(this, "Client");
             main.Activate();
             this.Hide();
             main.Show();
@@ -58,7 +58,7 @@ namespace LouvOgRathApp.GUI
         #region Events
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            App.Current.Shutdown();
+            Application.Current.Shutdown();
         }
         #endregion
 
