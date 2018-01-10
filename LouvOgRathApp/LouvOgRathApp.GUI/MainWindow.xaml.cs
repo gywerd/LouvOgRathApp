@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LouvOgRathApp.Shared.Entities;
+using LouvOgRathApp.ServerSide.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,12 +32,14 @@ namespace LouvOgRathApp.GUI
         UcSummary ucSummary;
         UcSecretary ucSecretary;
         UcSolicitor ucSolicitor;
+        private Repository repository;
         #endregion
 
         #region Window
         public MainWindow(object w, string user)
         {
             InitializeComponent();
+            TestConnection();
             callWindow = (Window)w;
             User = user;
             InvokeUserControls();
@@ -78,6 +82,11 @@ namespace LouvOgRathApp.GUI
             newCase.Show();
         }
 
+        private void OnMenuFilesNewClient_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Closes thos window, and returns to LoginPopUp
         /// </summary>
@@ -109,6 +118,22 @@ namespace LouvOgRathApp.GUI
                 userControlRight.Content = ucSummary = new UcSummary();
             }
         }
+        private void TestConnection()
+        {
+            try
+            {
+                repository = new Repository();
+                statusBar.Background = Brushes.Green;
+                labelConnection.Content = "Forbundet til server";
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("Unfortunately the connection to the database could not be established: " + $"{Environment.NewLine}{Environment.NewLine}{ex.Message}");
+                statusBar.Background = Brushes.Red;
+                labelConnection.Content = "Kunne ikke opnå forbindelse til serveren.";
+            }
+        }
+
         #endregion
 
     }

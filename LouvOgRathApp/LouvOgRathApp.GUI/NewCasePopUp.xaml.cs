@@ -44,6 +44,10 @@ namespace LouvOgRathApp.GUI
 
         }
 
+        private void TextBoxSubject_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             callWindow.Show();

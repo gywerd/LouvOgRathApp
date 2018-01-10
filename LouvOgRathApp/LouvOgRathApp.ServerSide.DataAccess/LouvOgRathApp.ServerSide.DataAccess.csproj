@@ -42,6 +42,16 @@
   <ItemGroup>
     <Compile Include="Executor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LouvOgRathApp.Shared.Entities\LouvOgRathApp.Shared.Entities.csproj">
+      <Project>{1a5e997e-9284-471d-bab3-6afdbfbfbfe7}</Project>
+      <Name>LouvOgRathApp.Shared.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ER-LouvOgRath.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

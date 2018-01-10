@@ -8,11 +8,12 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>LouvOgRathApp.GUI</RootNamespace>
     <AssemblyName>LouvOgRathApp.GUI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -148,6 +149,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LouvOgRathApp.ServerSide.DataAccess\LouvOgRathApp.ServerSide.DataAccess.csproj">
+      <Project>{4b3aaa3b-4feb-48e6-a5cd-92beb8b21000}</Project>
+      <Name>LouvOgRathApp.ServerSide.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LouvOgRathApp.Shared.Entities\LouvOgRathApp.Shared.Entities.csproj">
+      <Project>{1a5e997e-9284-471d-bab3-6afdbfbfbfe7}</Project>
+      <Name>LouvOgRathApp.Shared.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

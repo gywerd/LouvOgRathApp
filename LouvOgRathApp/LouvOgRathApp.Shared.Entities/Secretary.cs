@@ -30,7 +30,7 @@ namespace LouvOgRathApp.Shared.Entities
         /// <param name="town">string</param>
         /// <param name="ssn">int</param>
         /// <param name="place">string</param>
-        public Secretary(int id, int personid, string name, string adr, int zip, string town, int ssn, string place = null) : base(personid, name, adr, zip, town, ssn, place)
+        public Secretary(int id, Person person) : base(person)
         {
             this.id = id;
         }

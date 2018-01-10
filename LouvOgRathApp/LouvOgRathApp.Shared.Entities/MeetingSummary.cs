@@ -12,6 +12,7 @@ namespace LouvOgRathApp.Shared.Entities
         #region Fields
         int id;
         int caseId;
+        int secretaryId;
         DateTime date;
         string summary;
         #endregion
@@ -22,10 +23,11 @@ namespace LouvOgRathApp.Shared.Entities
         /// </summary>
         public MeetingSummary() { }
 
-        public MeetingSummary(int id, int caseId, DateTime date, string summary)
+        public MeetingSummary(int id, int caseId, int secretaryId, DateTime date, string summary = "")
         {
             this.id = id;
             this.caseId = caseId;
+            this.secretaryId = secretaryId;
             this.date = date;
             this.summary = summary;
         }
@@ -67,6 +69,33 @@ namespace LouvOgRathApp.Shared.Entities
                 try
                 {
                     caseId = value;
+                }
+                catch (ArgumentOutOfRangeException aor)
+                {
+                    MessageBox.Show(Convert.ToString(aor));
+                    throw;
+                }
+                catch (ArgumentNullException an)
+                {
+                    MessageBox.Show(Convert.ToString(an));
+                    throw;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(Convert.ToString(e));
+                    throw;
+                }
+
+            }
+        }
+        public int SecretaryId
+        {
+            get => secretaryId;
+            set
+            {
+                try
+                {
+                    secretaryId = value;
                 }
                 catch (ArgumentOutOfRangeException aor)
                 {

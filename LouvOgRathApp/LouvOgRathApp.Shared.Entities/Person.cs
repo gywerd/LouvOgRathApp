@@ -45,6 +45,18 @@ namespace LouvOgRathApp.Shared.Entities
             this.town = town;
             this.ssn = ssn;
         }
+
+        public Person(Person person)
+        {
+            this.id = person.Id;
+            this.name = person.Name;
+            this.address = person.Address;
+            this.place = person.Place;
+            this.zip = person.Zip;
+            this.town = person.Town;
+            this.ssn = person.Ssn;
+        }
+
         #endregion
 
         #region Properties

@@ -34,6 +34,16 @@ namespace LouvOgRathApp.Shared.Entities
         {
             this.id = id;
         }
+
+        /// <summary>
+        /// Constructor used, when reading from D
+        /// </summary>
+        /// <param name="id">int</param>
+        /// <param name="person">Person</param>
+        public Client(int id, Person person) : base(person)
+        {
+            this.id = id;
+        }
         #endregion
 
         #region Properties

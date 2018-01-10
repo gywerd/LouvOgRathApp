@@ -36,6 +36,11 @@ namespace LouvOgRathApp.Shared.Entities
         }
         #endregion
 
+        public Lawyer(int id, Person person) : base(person)
+        {
+            this.id = id;
+        }
+
         #region Properties
         public int LawId
         {
