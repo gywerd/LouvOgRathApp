@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WeatherService;
 
 namespace LouvOgRathApp.GUI
 {
@@ -33,6 +34,8 @@ namespace LouvOgRathApp.GUI
         UcSecretary ucSecretary;
         UcSolicitor ucSolicitor;
         private Repository repository;
+        private WeatherAPI weatherAPI;
+        List<Case> cases = new List<Case>();
         #endregion
 
         #region Window
@@ -42,7 +45,10 @@ namespace LouvOgRathApp.GUI
             TestConnection();
             callWindow = (Window)w;
             User = user;
+            cases = repository.GetAllCases();
             InvokeUserControls();
+            weatherAPI = new WeatherAPI(labelWeather);
+            weatherAPI.GetCityNameAsync();
         }
 
         #endregion
@@ -104,7 +110,7 @@ namespace LouvOgRathApp.GUI
         {
             if (User == "Secretary")
             {
-                userControlLeft.Content = ucCases = new UcCases();
+                userControlLeft.Content = ucCases = new UcCases(cases);
                 userControlRight.Content = ucSecretary = new UcSecretary(); ;
             }
             else if (User == "Lawyer")

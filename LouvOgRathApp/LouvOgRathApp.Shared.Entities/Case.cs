@@ -9,10 +9,10 @@ namespace LouvOgRathApp.Shared.Entities
     public class Case
     {
         #region Fields
-        int id;
-        string caseKind;
-        int lawyerId;
-        int clientId;
+        public int Id;
+        public string CaseKind;
+        public int LawyerId;
+        public int ClientId;
         #endregion
 
         #region Constructors
@@ -30,18 +30,18 @@ namespace LouvOgRathApp.Shared.Entities
         /// <param name="clientId"></param>
         public Case(int id, string caseKind, int lawyerId, int clientId)
         {
-            this.id = id;
-            this.caseKind = caseKind;
-            this.lawyerId = lawyerId;
-            this.clientId = clientId;
+            this.Id = id;
+            this.CaseKind = caseKind;
+            this.LawyerId = lawyerId;
+            this.ClientId = clientId;
         }
         #endregion
 
         #region Properties
-        public int Id { get => id; set => id = value; }
-        public string Casekind { get => caseKind; set => caseKind = value; }
-        public int LawyerId { get => lawyerId; set => lawyerId = value; }
-        public int ClientId { get => clientId; set => clientId = value; }
+        //public int Id { get => id; set => id = value; }
+        //public string Casekind { get => caseKind; set => caseKind = value; }
+        //public int LawyerId { get => lawyerId; set => lawyerId = value; }
+        //public int ClientId { get => clientId; set => clientId = value; }
         #endregion
     }
 }

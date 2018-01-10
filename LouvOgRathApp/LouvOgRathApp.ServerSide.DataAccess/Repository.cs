@@ -117,7 +117,7 @@ namespace LouvOgRathApp.ServerSide.DataAccess
         public List<Case> GetAllCases()
         {
             List<Case> css = new List<Case>();
-            string query = "SELECT * FROM Case";
+            string query = "SELECT * FROM [Case]";
             //using stored procedure instead of specific query
             //string query = "SelectAll";
             DataSet data = executor.Execute(query);
@@ -137,7 +137,7 @@ namespace LouvOgRathApp.ServerSide.DataAccess
         public List<MeetingSummary> GetAllMeetingSummaries()
         {
             List<MeetingSummary> mss = new List<MeetingSummary>();
-            string query = "SELECT * FROM Case";
+            string query = "SELECT * FROM MeetingSummaries";
             //using stored procedure instead of specific query
             //string query = "SelectAll";
             DataSet data = executor.Execute(query);

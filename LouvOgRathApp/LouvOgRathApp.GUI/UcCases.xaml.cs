@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LouvOgRathApp.Shared.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,14 @@ namespace LouvOgRathApp.GUI
     /// </summary>
     public partial class UcCases : UserControl
     {
+        List<Case> cases;
+
         #region Window
-        public UcCases()
+        public UcCases(List<Case> cases)
         {
             InitializeComponent();
+            this.cases = cases;
+            dataGridCases.DataContext = cases;
         }
         #endregion
 

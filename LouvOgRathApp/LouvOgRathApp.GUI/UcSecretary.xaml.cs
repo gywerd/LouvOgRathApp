@@ -24,5 +24,10 @@ namespace LouvOgRathApp.GUI
         {
             InitializeComponent();
         }
+
+        private void BtnSaveSummary_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

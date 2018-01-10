@@ -159,6 +159,10 @@
       <Project>{1a5e997e-9284-471d-bab3-6afdbfbfbfe7}</Project>
       <Name>LouvOgRathApp.Shared.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WeatherService\WeatherService.csproj">
+      <Project>{F630E7C3-743D-4C84-A3B0-9AEC3CBD97DF}</Project>
+      <Name>WeatherService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

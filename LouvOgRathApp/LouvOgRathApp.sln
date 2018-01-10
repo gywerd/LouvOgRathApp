@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LouvOgRathApp.ServerSide.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LouvOgRathApp.GUI", "LouvOgRathApp.GUI\LouvOgRathApp.GUI.csproj", "{3CA8B577-3625-44E6-A1B9-77D285175107}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService", "WeatherService\WeatherService.csproj", "{F630E7C3-743D-4C84-A3B0-9AEC3CBD97DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3CA8B577-3625-44E6-A1B9-77D285175107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CA8B577-3625-44E6-A1B9-77D285175107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CA8B577-3625-44E6-A1B9-77D285175107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F630E7C3-743D-4C84-A3B0-9AEC3CBD97DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F630E7C3-743D-4C84-A3B0-9AEC3CBD97DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F630E7C3-743D-4C84-A3B0-9AEC3CBD97DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F630E7C3-743D-4C84-A3B0-9AEC3CBD97DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{F78A2560-A009-447C-896A-0A7AD59B2B26} = {08DA6688-B0D7-44FC-8E54-23C6C31F8650}
 		{D15E4AE6-844C-4C26-8584-BD1702FAFEA1} = {D3B2B106-7621-402D-AC04-C28BFE7EA012}
 		{3CA8B577-3625-44E6-A1B9-77D285175107} = {016B3F98-203D-4D29-A58A-085D2E65385F}
+		{F630E7C3-743D-4C84-A3B0-9AEC3CBD97DF} = {016B3F98-203D-4D29-A58A-085D2E65385F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3037C00-9B01-4FD8-87DC-DE5A9C9AA97B}
